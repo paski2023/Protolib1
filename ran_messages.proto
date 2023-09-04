@@ -10,10 +10,12 @@ enum RAN_message_type{
 enum RAN_parameter{
     GNB_ID = 1;
     UE_LIST = 2;
-    P1 = 3
-    P2 = 4
-    P3 = 5
-    P4 = 6
+    UE_RSRP = 3;           // New parameter: UE_RSRP
+    UE_BER_UPLINK = 4;     // New parameter: UE_BER_UPLINK
+    UE_BER_DOWNLINK = 5;   // New parameter: UE_BER_DOWNLINK
+    UE_MCS_UPLINK = 6;     // New parameter: UE_MCS_UPLINK
+    UE_MCS_DOWNLINK = 7;   // New parameter: UE_MCS_DOWNLINK
+    CELL_SIZE = 8;
 }
 
 message RAN_param_map_entry{
@@ -22,6 +24,7 @@ message RAN_param_map_entry{
         int64 int64_value  = 2;
         string string_value = 3;
         ue_list_m ue_list = 4;
+        float float_value = 5; // New field for float values
     }
 }
 
