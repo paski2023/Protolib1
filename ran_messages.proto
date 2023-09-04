@@ -9,7 +9,11 @@ enum RAN_message_type{
 
 enum RAN_parameter{
     GNB_ID = 1;
-    UE_LIST = 3;
+    UE_LIST = 2;
+    P1 = 3
+    P2 = 4
+    P3 = 5
+    P4 = 6
 }
 
 message RAN_param_map_entry{
