@@ -35,7 +35,28 @@ typedef enum _RANMessageType {
 } RANMessageType;
 typedef enum _RANParameter {
   RAN_PARAMETER__GNB_ID = 1,
-  RAN_PARAMETER__UE_LIST = 3
+  RAN_PARAMETER__UE_LIST = 2,
+  /*
+   * New parameter: UE_RSRP
+   */
+  RAN_PARAMETER__UE_RSRP = 3,
+  /*
+   * New parameter: UE_BER_UPLINK
+   */
+  RAN_PARAMETER__UE_BER_UPLINK = 4,
+  /*
+   * New parameter: UE_BER_DOWNLINK
+   */
+  RAN_PARAMETER__UE_BER_DOWNLINK = 5,
+  /*
+   * New parameter: UE_MCS_UPLINK
+   */
+  RAN_PARAMETER__UE_MCS_UPLINK = 6,
+  /*
+   * New parameter: UE_MCS_DOWNLINK
+   */
+  RAN_PARAMETER__UE_MCS_DOWNLINK = 7,
+  RAN_PARAMETER__CELL_SIZE = 8
     PROTOBUF_C__FORCE_ENUM_TO_BE_INT_SIZE(RAN_PARAMETER)
 } RANParameter;
 
@@ -45,7 +66,8 @@ typedef enum {
   RAN_PARAM_MAP_ENTRY__VALUE__NOT_SET = 0,
   RAN_PARAM_MAP_ENTRY__VALUE_INT64_VALUE = 2,
   RAN_PARAM_MAP_ENTRY__VALUE_STRING_VALUE = 3,
-  RAN_PARAM_MAP_ENTRY__VALUE_UE_LIST = 4
+  RAN_PARAM_MAP_ENTRY__VALUE_UE_LIST = 4,
+  RAN_PARAM_MAP_ENTRY__VALUE_FLOAT_VALUE = 5
     PROTOBUF_C__FORCE_ENUM_TO_BE_INT_SIZE(RAN_PARAM_MAP_ENTRY__VALUE)
 } RANParamMapEntry__ValueCase;
 
@@ -58,6 +80,10 @@ struct  _RANParamMapEntry
     int64_t int64_value;
     char *string_value;
     UeListM *ue_list;
+    /*
+     * New field for float values
+     */
+    float float_value;
   };
 };
 #define RAN_PARAM_MAP_ENTRY__INIT \
@@ -143,15 +169,24 @@ struct  _UeInfoM
   float meas_type_3;
   /*
    * specific ue's propoerties (these will be set by the xapp and sent to gnb)
+   * additional measurements
    */
-  protobuf_c_boolean has_prop_1;
-  protobuf_c_boolean prop_1;
-  protobuf_c_boolean has_prop_2;
-  float prop_2;
+  protobuf_c_boolean has_ue_rsrp;
+  float ue_rsrp;
+  protobuf_c_boolean has_ue_ber_uplink;
+  float ue_ber_uplink;
+  protobuf_c_boolean has_ue_ber_downlink;
+  float ue_ber_downlink;
+  protobuf_c_boolean has_ue_mcs_uplink;
+  float ue_mcs_uplink;
+  protobuf_c_boolean has_ue_mcs_downlink;
+  float ue_mcs_downlink;
+  protobuf_c_boolean has_cell_size;
+  int32_t cell_size;
 };
 #define UE_INFO_M__INIT \
  { PROTOBUF_C_MESSAGE_INIT (&ue_info_m__descriptor) \
-    , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+    , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
 
 
 struct  _UeListM
