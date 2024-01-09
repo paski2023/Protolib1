@@ -322,7 +322,7 @@ void   ue_list_m__free_unpacked
   assert(message->base.descriptor == &ue_list_m__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-static const ProtobufCFieldDescriptor ran_param_map_entry__field_descriptors[5] =
+static const ProtobufCFieldDescriptor ran_param_map_entry__field_descriptors[4] =
 {
   {
     "key",
@@ -372,21 +372,8 @@ static const ProtobufCFieldDescriptor ran_param_map_entry__field_descriptors[5] 
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
-  {
-    "float_value",
-    5,
-    PROTOBUF_C_LABEL_OPTIONAL,
-    PROTOBUF_C_TYPE_FLOAT,
-    offsetof(RANParamMapEntry, value_case),
-    offsetof(RANParamMapEntry, float_value),
-    NULL,
-    NULL,
-    0 | PROTOBUF_C_FIELD_FLAG_ONEOF,             /* flags */
-    0,NULL,NULL    /* reserved1,reserved2, etc */
-  },
 };
 static const unsigned ran_param_map_entry__field_indices_by_name[] = {
-  4,   /* field[4] = float_value */
   1,   /* field[1] = int64_value */
   0,   /* field[0] = key */
   2,   /* field[2] = string_value */
@@ -395,7 +382,7 @@ static const unsigned ran_param_map_entry__field_indices_by_name[] = {
 static const ProtobufCIntRange ran_param_map_entry__number_ranges[1 + 1] =
 {
   { 1, 0 },
-  { 0, 5 }
+  { 0, 4 }
 };
 const ProtobufCMessageDescriptor ran_param_map_entry__descriptor =
 {
@@ -405,7 +392,7 @@ const ProtobufCMessageDescriptor ran_param_map_entry__descriptor =
   "RANParamMapEntry",
   "",
   sizeof(RANParamMapEntry),
-  5,
+  4,
   ran_param_map_entry__field_descriptors,
   ran_param_map_entry__field_indices_by_name,
   1,  ran_param_map_entry__number_ranges,
@@ -842,30 +829,18 @@ const ProtobufCEnumDescriptor ran_message_type__descriptor =
   ran_message_type__value_ranges,
   NULL,NULL,NULL,NULL   /* reserved[1234] */
 };
-static const ProtobufCEnumValue ran_parameter__enum_values_by_number[8] =
+static const ProtobufCEnumValue ran_parameter__enum_values_by_number[2] =
 {
   { "GNB_ID", "RAN_PARAMETER__GNB_ID", 1 },
   { "UE_LIST", "RAN_PARAMETER__UE_LIST", 2 },
-  { "UE_RSRP", "RAN_PARAMETER__UE_RSRP", 3 },
-  { "UE_BER_UPLINK", "RAN_PARAMETER__UE_BER_UPLINK", 4 },
-  { "UE_BER_DOWNLINK", "RAN_PARAMETER__UE_BER_DOWNLINK", 5 },
-  { "UE_MCS_UPLINK", "RAN_PARAMETER__UE_MCS_UPLINK", 6 },
-  { "UE_MCS_DOWNLINK", "RAN_PARAMETER__UE_MCS_DOWNLINK", 7 },
-  { "CELL_SIZE", "RAN_PARAMETER__CELL_SIZE", 8 },
 };
 static const ProtobufCIntRange ran_parameter__value_ranges[] = {
-{1, 0},{0, 8}
+{1, 0},{0, 2}
 };
-static const ProtobufCEnumValueIndex ran_parameter__enum_values_by_name[8] =
+static const ProtobufCEnumValueIndex ran_parameter__enum_values_by_name[2] =
 {
-  { "CELL_SIZE", 7 },
   { "GNB_ID", 0 },
-  { "UE_BER_DOWNLINK", 4 },
-  { "UE_BER_UPLINK", 3 },
   { "UE_LIST", 1 },
-  { "UE_MCS_DOWNLINK", 6 },
-  { "UE_MCS_UPLINK", 5 },
-  { "UE_RSRP", 2 },
 };
 const ProtobufCEnumDescriptor ran_parameter__descriptor =
 {
@@ -874,9 +849,9 @@ const ProtobufCEnumDescriptor ran_parameter__descriptor =
   "RAN_parameter",
   "RANParameter",
   "",
-  8,
+  2,
   ran_parameter__enum_values_by_number,
-  8,
+  2,
   ran_parameter__enum_values_by_name,
   1,
   ran_parameter__value_ranges,

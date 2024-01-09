@@ -35,28 +35,7 @@ typedef enum _RANMessageType {
 } RANMessageType;
 typedef enum _RANParameter {
   RAN_PARAMETER__GNB_ID = 1,
-  RAN_PARAMETER__UE_LIST = 2,
-  /*
-   * New parameter: UE_RSRP
-   */
-  RAN_PARAMETER__UE_RSRP = 3,
-  /*
-   * New parameter: UE_BER_UPLINK
-   */
-  RAN_PARAMETER__UE_BER_UPLINK = 4,
-  /*
-   * New parameter: UE_BER_DOWNLINK
-   */
-  RAN_PARAMETER__UE_BER_DOWNLINK = 5,
-  /*
-   * New parameter: UE_MCS_UPLINK
-   */
-  RAN_PARAMETER__UE_MCS_UPLINK = 6,
-  /*
-   * New parameter: UE_MCS_DOWNLINK
-   */
-  RAN_PARAMETER__UE_MCS_DOWNLINK = 7,
-  RAN_PARAMETER__CELL_SIZE = 8
+  RAN_PARAMETER__UE_LIST = 2
     PROTOBUF_C__FORCE_ENUM_TO_BE_INT_SIZE(RAN_PARAMETER)
 } RANParameter;
 
@@ -66,8 +45,7 @@ typedef enum {
   RAN_PARAM_MAP_ENTRY__VALUE__NOT_SET = 0,
   RAN_PARAM_MAP_ENTRY__VALUE_INT64_VALUE = 2,
   RAN_PARAM_MAP_ENTRY__VALUE_STRING_VALUE = 3,
-  RAN_PARAM_MAP_ENTRY__VALUE_UE_LIST = 4,
-  RAN_PARAM_MAP_ENTRY__VALUE_FLOAT_VALUE = 5
+  RAN_PARAM_MAP_ENTRY__VALUE_UE_LIST = 4
     PROTOBUF_C__FORCE_ENUM_TO_BE_INT_SIZE(RAN_PARAM_MAP_ENTRY__VALUE)
 } RANParamMapEntry__ValueCase;
 
@@ -80,10 +58,6 @@ struct  _RANParamMapEntry
     int64_t int64_value;
     char *string_value;
     UeListM *ue_list;
-    /*
-     * New field for float values
-     */
-    float float_value;
   };
 };
 #define RAN_PARAM_MAP_ENTRY__INIT \

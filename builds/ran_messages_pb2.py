@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x12ran_messages.proto\"\xa0\x01\n\x13RAN_param_map_entry\x12\x1b\n\x03key\x18\x01 \x02(\x0e\x32\x0e.RAN_parameter\x12\x15\n\x0bint64_value\x18\x02 \x01(\x03H\x00\x12\x16\n\x0cstring_value\x18\x03 \x01(\tH\x00\x12\x1d\n\x07ue_list\x18\x04 \x01(\x0b\x32\n.ue_list_mH\x00\x12\x15\n\x0b\x66loat_value\x18\x05 \x01(\x02H\x00\x42\x07\n\x05value\"?\n\x16RAN_indication_request\x12%\n\rtarget_params\x18\x01 \x03(\x0e\x32\x0e.RAN_parameter\"B\n\x17RAN_indication_response\x12\'\n\tparam_map\x18\x01 \x03(\x0b\x32\x14.RAN_param_map_entry\"E\n\x13RAN_control_request\x12.\n\x10target_param_map\x18\x01 \x03(\x0b\x32\x14.RAN_param_map_entry\"\xea\x01\n\x0bRAN_message\x12#\n\x08msg_type\x18\x01 \x02(\x0e\x32\x11.RAN_message_type\x12\x39\n\x16ran_indication_request\x18\x02 \x01(\x0b\x32\x17.RAN_indication_requestH\x00\x12;\n\x17ran_indication_response\x18\x03 \x01(\x0b\x32\x18.RAN_indication_responseH\x00\x12\x33\n\x13ran_control_request\x18\x04 \x01(\x0b\x32\x14.RAN_control_requestH\x00\x42\t\n\x07payload\"\xdc\x01\n\tue_info_m\x12\x0c\n\x04rnti\x18\x01 \x02(\x05\x12\x13\n\x0bmeas_type_1\x18\x02 \x01(\x02\x12\x13\n\x0bmeas_type_2\x18\x03 \x01(\x02\x12\x13\n\x0bmeas_type_3\x18\x04 \x01(\x02\x12\x0f\n\x07ue_rsrp\x18\x07 \x01(\x02\x12\x15\n\rue_ber_uplink\x18\x08 \x01(\x02\x12\x17\n\x0fue_ber_downlink\x18\t \x01(\x02\x12\x15\n\rue_mcs_uplink\x18\n \x01(\x02\x12\x17\n\x0fue_mcs_downlink\x18\x0b \x01(\x02\x12\x11\n\tcell_size\x18\x0c \x01(\x05\"?\n\tue_list_m\x12\x15\n\rconnected_ues\x18\x01 \x02(\x05\x12\x1b\n\x07ue_info\x18\x02 \x03(\x0b\x32\n.ue_info_m*b\n\x10RAN_message_type\x12\x10\n\x0cSUBSCRIPTION\x10\x01\x12\x16\n\x12INDICATION_REQUEST\x10\x02\x12\x17\n\x13INDICATION_RESPONSE\x10\x03\x12\x0b\n\x07\x43ONTROL\x10\x04*\x94\x01\n\rRAN_parameter\x12\n\n\x06GNB_ID\x10\x01\x12\x0b\n\x07UE_LIST\x10\x02\x12\x0b\n\x07UE_RSRP\x10\x03\x12\x11\n\rUE_BER_UPLINK\x10\x04\x12\x13\n\x0fUE_BER_DOWNLINK\x10\x05\x12\x11\n\rUE_MCS_UPLINK\x10\x06\x12\x13\n\x0fUE_MCS_DOWNLINK\x10\x07\x12\r\n\tCELL_SIZE\x10\x08'
+  serialized_pb=b'\n\x12ran_messages.proto\"\x89\x01\n\x13RAN_param_map_entry\x12\x1b\n\x03key\x18\x01 \x02(\x0e\x32\x0e.RAN_parameter\x12\x15\n\x0bint64_value\x18\x02 \x01(\x03H\x00\x12\x16\n\x0cstring_value\x18\x03 \x01(\tH\x00\x12\x1d\n\x07ue_list\x18\x04 \x01(\x0b\x32\n.ue_list_mH\x00\x42\x07\n\x05value\"?\n\x16RAN_indication_request\x12%\n\rtarget_params\x18\x01 \x03(\x0e\x32\x0e.RAN_parameter\"B\n\x17RAN_indication_response\x12\'\n\tparam_map\x18\x01 \x03(\x0b\x32\x14.RAN_param_map_entry\"E\n\x13RAN_control_request\x12.\n\x10target_param_map\x18\x01 \x03(\x0b\x32\x14.RAN_param_map_entry\"\xea\x01\n\x0bRAN_message\x12#\n\x08msg_type\x18\x01 \x02(\x0e\x32\x11.RAN_message_type\x12\x39\n\x16ran_indication_request\x18\x02 \x01(\x0b\x32\x17.RAN_indication_requestH\x00\x12;\n\x17ran_indication_response\x18\x03 \x01(\x0b\x32\x18.RAN_indication_responseH\x00\x12\x33\n\x13ran_control_request\x18\x04 \x01(\x0b\x32\x14.RAN_control_requestH\x00\x42\t\n\x07payload\"\xdc\x01\n\tue_info_m\x12\x0c\n\x04rnti\x18\x01 \x02(\x05\x12\x13\n\x0bmeas_type_1\x18\x02 \x01(\x02\x12\x13\n\x0bmeas_type_2\x18\x03 \x01(\x02\x12\x13\n\x0bmeas_type_3\x18\x04 \x01(\x02\x12\x0f\n\x07ue_rsrp\x18\x07 \x01(\x02\x12\x15\n\rue_ber_uplink\x18\x08 \x01(\x02\x12\x17\n\x0fue_ber_downlink\x18\t \x01(\x02\x12\x15\n\rue_mcs_uplink\x18\n \x01(\x02\x12\x17\n\x0fue_mcs_downlink\x18\x0b \x01(\x02\x12\x11\n\tcell_size\x18\x0c \x01(\x05\"?\n\tue_list_m\x12\x15\n\rconnected_ues\x18\x01 \x02(\x05\x12\x1b\n\x07ue_info\x18\x02 \x03(\x0b\x32\n.ue_info_m*b\n\x10RAN_message_type\x12\x10\n\x0cSUBSCRIPTION\x10\x01\x12\x16\n\x12INDICATION_REQUEST\x10\x02\x12\x17\n\x13INDICATION_RESPONSE\x10\x03\x12\x0b\n\x07\x43ONTROL\x10\x04*(\n\rRAN_parameter\x12\n\n\x06GNB_ID\x10\x01\x12\x0b\n\x07UE_LIST\x10\x02'
 )
 
 _RAN_MESSAGE_TYPE = _descriptor.EnumDescriptor(
@@ -53,8 +53,8 @@ _RAN_MESSAGE_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=914,
-  serialized_end=1012,
+  serialized_start=891,
+  serialized_end=989,
 )
 _sym_db.RegisterEnumDescriptor(_RAN_MESSAGE_TYPE)
 
@@ -76,41 +76,11 @@ _RAN_PARAMETER = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='UE_RSRP', index=2, number=3,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='UE_BER_UPLINK', index=3, number=4,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='UE_BER_DOWNLINK', index=4, number=5,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='UE_MCS_UPLINK', index=5, number=6,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='UE_MCS_DOWNLINK', index=6, number=7,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='CELL_SIZE', index=7, number=8,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1015,
-  serialized_end=1163,
+  serialized_start=991,
+  serialized_end=1031,
 )
 _sym_db.RegisterEnumDescriptor(_RAN_PARAMETER)
 
@@ -121,12 +91,6 @@ INDICATION_RESPONSE = 3
 CONTROL = 4
 GNB_ID = 1
 UE_LIST = 2
-UE_RSRP = 3
-UE_BER_UPLINK = 4
-UE_BER_DOWNLINK = 5
-UE_MCS_UPLINK = 6
-UE_MCS_DOWNLINK = 7
-CELL_SIZE = 8
 
 
 
@@ -166,13 +130,6 @@ _RAN_PARAM_MAP_ENTRY = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='float_value', full_name='RAN_param_map_entry.float_value', index=4,
-      number=5, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -191,7 +148,7 @@ _RAN_PARAM_MAP_ENTRY = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=23,
-  serialized_end=183,
+  serialized_end=160,
 )
 
 
@@ -222,8 +179,8 @@ _RAN_INDICATION_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=185,
-  serialized_end=248,
+  serialized_start=162,
+  serialized_end=225,
 )
 
 
@@ -254,8 +211,8 @@ _RAN_INDICATION_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=250,
-  serialized_end=316,
+  serialized_start=227,
+  serialized_end=293,
 )
 
 
@@ -286,8 +243,8 @@ _RAN_CONTROL_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=318,
-  serialized_end=387,
+  serialized_start=295,
+  serialized_end=364,
 )
 
 
@@ -344,8 +301,8 @@ _RAN_MESSAGE = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=390,
-  serialized_end=624,
+  serialized_start=367,
+  serialized_end=601,
 )
 
 
@@ -439,8 +396,8 @@ _UE_INFO_M = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=627,
-  serialized_end=847,
+  serialized_start=604,
+  serialized_end=824,
 )
 
 
@@ -478,8 +435,8 @@ _UE_LIST_M = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=849,
-  serialized_end=912,
+  serialized_start=826,
+  serialized_end=889,
 )
 
 _RAN_PARAM_MAP_ENTRY.fields_by_name['key'].enum_type = _RAN_PARAMETER
@@ -493,9 +450,6 @@ _RAN_PARAM_MAP_ENTRY.fields_by_name['string_value'].containing_oneof = _RAN_PARA
 _RAN_PARAM_MAP_ENTRY.oneofs_by_name['value'].fields.append(
   _RAN_PARAM_MAP_ENTRY.fields_by_name['ue_list'])
 _RAN_PARAM_MAP_ENTRY.fields_by_name['ue_list'].containing_oneof = _RAN_PARAM_MAP_ENTRY.oneofs_by_name['value']
-_RAN_PARAM_MAP_ENTRY.oneofs_by_name['value'].fields.append(
-  _RAN_PARAM_MAP_ENTRY.fields_by_name['float_value'])
-_RAN_PARAM_MAP_ENTRY.fields_by_name['float_value'].containing_oneof = _RAN_PARAM_MAP_ENTRY.oneofs_by_name['value']
 _RAN_INDICATION_REQUEST.fields_by_name['target_params'].enum_type = _RAN_PARAMETER
 _RAN_INDICATION_RESPONSE.fields_by_name['param_map'].message_type = _RAN_PARAM_MAP_ENTRY
 _RAN_CONTROL_REQUEST.fields_by_name['target_param_map'].message_type = _RAN_PARAM_MAP_ENTRY
