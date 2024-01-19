@@ -3,7 +3,7 @@ syntax = "proto2";
 enum RAN_message_type{
     SUBSCRIPTION = 1;
     INDICATION_REQUEST = 2;
-    INDICATION_RESPONSE = 3;
+    INDICATION_RESPONSE = 3; 
     CONTROL = 4;
 } 
 
@@ -12,6 +12,14 @@ enum RAN_parameter{
     UE_LIST = 2;
 }
 
+enum MCS{
+
+    MCS1 = 1; 
+    MCS2 = 2; 
+    MCS3 = 3; 
+    MCS4 = 4; 
+
+}
 message RAN_param_map_entry{
     required RAN_parameter key = 1;
     oneof value{
@@ -51,19 +59,15 @@ message ue_info_m{
     // this is to identify the ue
     required int32 rnti=1;
 
-    // specific ue's measurements (these will come from the gnb)
-    optional float meas_type_1=2;
-    optional float meas_type_2=3;
-    optional float meas_type_3=4;
-
     // specific ue's propoerties (these will be set by the xapp and sent to gnb)
     // additional measurements
     optional float ue_rsrp = 7;
     optional float ue_ber_uplink = 8;
     optional float ue_ber_downlink = 9;
-    optional float ue_mcs_uplink = 10;
-    optional float ue_mcs_downlink = 11;
-    optional int32 cell_size = 12;
+    // CONVERTI IN INTERO
+    optional MCS ue_mcs_uplink = 1;
+    optional MCS ue_mcs_downlink = 1;
+    optional int32 cell_load = 12;
 }
 
 message ue_list_m{
