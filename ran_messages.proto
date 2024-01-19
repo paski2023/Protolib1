@@ -61,13 +61,13 @@ message ue_info_m{
 
     // specific ue's propoerties (these will be set by the xapp and sent to gnb)
     // additional measurements
-    optional float ue_rsrp = 7;
-    optional float ue_ber_uplink = 8;
-    optional float ue_ber_downlink = 9;
+    optional float ue_rsrp = 2;
+    optional float ue_ber_uplink = 3;
+    optional float ue_ber_downlink = 4;
     // CONVERTI IN INTERO
-    optional MCS ue_mcs_uplink = 1;
-    optional MCS ue_mcs_downlink = 1;
-    optional int32 cell_load = 12;
+    optional MCS ue_mcs_uplink = 6;
+    optional MCS ue_mcs_downlink = 7;
+    optional int32 cell_load = 8;
 }
 
 message ue_list_m{
