@@ -14,10 +14,11 @@ enum RAN_parameter{
 
 enum MCS{
 
-    MCS1 = 1; 
-    MCS2 = 2; 
-    MCS3 = 3; 
-    MCS4 = 4; 
+    MCS1 = 0; 
+    MCS2 = 1; 
+    MCS3 = 2; 
+    MCS4 = 3; 
+    n_schemes = 4; 
 
 }
 message RAN_param_map_entry{
