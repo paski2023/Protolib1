@@ -590,7 +590,7 @@ const ProtobufCMessageDescriptor ran_message__descriptor =
   (ProtobufCMessageInit) ran_message__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[10] =
+static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[7] =
 {
   {
     "rnti",
@@ -605,44 +605,8 @@ static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[10] =
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
   {
-    "meas_type_1",
-    2,
-    PROTOBUF_C_LABEL_OPTIONAL,
-    PROTOBUF_C_TYPE_FLOAT,
-    offsetof(UeInfoM, has_meas_type_1),
-    offsetof(UeInfoM, meas_type_1),
-    NULL,
-    NULL,
-    0,             /* flags */
-    0,NULL,NULL    /* reserved1,reserved2, etc */
-  },
-  {
-    "meas_type_2",
-    3,
-    PROTOBUF_C_LABEL_OPTIONAL,
-    PROTOBUF_C_TYPE_FLOAT,
-    offsetof(UeInfoM, has_meas_type_2),
-    offsetof(UeInfoM, meas_type_2),
-    NULL,
-    NULL,
-    0,             /* flags */
-    0,NULL,NULL    /* reserved1,reserved2, etc */
-  },
-  {
-    "meas_type_3",
-    4,
-    PROTOBUF_C_LABEL_OPTIONAL,
-    PROTOBUF_C_TYPE_FLOAT,
-    offsetof(UeInfoM, has_meas_type_3),
-    offsetof(UeInfoM, meas_type_3),
-    NULL,
-    NULL,
-    0,             /* flags */
-    0,NULL,NULL    /* reserved1,reserved2, etc */
-  },
-  {
     "ue_rsrp",
-    7,
+    2,
     PROTOBUF_C_LABEL_OPTIONAL,
     PROTOBUF_C_TYPE_FLOAT,
     offsetof(UeInfoM, has_ue_rsrp),
@@ -654,7 +618,7 @@ static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[10] =
   },
   {
     "ue_ber_uplink",
-    8,
+    3,
     PROTOBUF_C_LABEL_OPTIONAL,
     PROTOBUF_C_TYPE_FLOAT,
     offsetof(UeInfoM, has_ue_ber_uplink),
@@ -666,7 +630,7 @@ static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[10] =
   },
   {
     "ue_ber_downlink",
-    9,
+    4,
     PROTOBUF_C_LABEL_OPTIONAL,
     PROTOBUF_C_TYPE_FLOAT,
     offsetof(UeInfoM, has_ue_ber_downlink),
@@ -678,35 +642,35 @@ static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[10] =
   },
   {
     "ue_mcs_uplink",
-    10,
+    6,
     PROTOBUF_C_LABEL_OPTIONAL,
-    PROTOBUF_C_TYPE_FLOAT,
+    PROTOBUF_C_TYPE_ENUM,
     offsetof(UeInfoM, has_ue_mcs_uplink),
     offsetof(UeInfoM, ue_mcs_uplink),
-    NULL,
+    &mcs__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
   {
     "ue_mcs_downlink",
-    11,
+    7,
     PROTOBUF_C_LABEL_OPTIONAL,
-    PROTOBUF_C_TYPE_FLOAT,
+    PROTOBUF_C_TYPE_ENUM,
     offsetof(UeInfoM, has_ue_mcs_downlink),
     offsetof(UeInfoM, ue_mcs_downlink),
-    NULL,
+    &mcs__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
   {
-    "cell_size",
-    12,
+    "cell_load",
+    8,
     PROTOBUF_C_LABEL_OPTIONAL,
     PROTOBUF_C_TYPE_INT32,
-    offsetof(UeInfoM, has_cell_size),
-    offsetof(UeInfoM, cell_size),
+    offsetof(UeInfoM, has_cell_load),
+    offsetof(UeInfoM, cell_load),
     NULL,
     NULL,
     0,             /* flags */
@@ -714,22 +678,19 @@ static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[10] =
   },
 };
 static const unsigned ue_info_m__field_indices_by_name[] = {
-  9,   /* field[9] = cell_size */
-  1,   /* field[1] = meas_type_1 */
-  2,   /* field[2] = meas_type_2 */
-  3,   /* field[3] = meas_type_3 */
+  6,   /* field[6] = cell_load */
   0,   /* field[0] = rnti */
-  6,   /* field[6] = ue_ber_downlink */
-  5,   /* field[5] = ue_ber_uplink */
-  8,   /* field[8] = ue_mcs_downlink */
-  7,   /* field[7] = ue_mcs_uplink */
-  4,   /* field[4] = ue_rsrp */
+  3,   /* field[3] = ue_ber_downlink */
+  2,   /* field[2] = ue_ber_uplink */
+  5,   /* field[5] = ue_mcs_downlink */
+  4,   /* field[4] = ue_mcs_uplink */
+  1,   /* field[1] = ue_rsrp */
 };
 static const ProtobufCIntRange ue_info_m__number_ranges[2 + 1] =
 {
   { 1, 0 },
-  { 7, 4 },
-  { 0, 10 }
+  { 6, 4 },
+  { 0, 7 }
 };
 const ProtobufCMessageDescriptor ue_info_m__descriptor =
 {
@@ -739,7 +700,7 @@ const ProtobufCMessageDescriptor ue_info_m__descriptor =
   "UeInfoM",
   "",
   sizeof(UeInfoM),
-  10,
+  7,
   ue_info_m__field_descriptors,
   ue_info_m__field_indices_by_name,
   2,  ue_info_m__number_ranges,
@@ -855,5 +816,39 @@ const ProtobufCEnumDescriptor ran_parameter__descriptor =
   ran_parameter__enum_values_by_name,
   1,
   ran_parameter__value_ranges,
+  NULL,NULL,NULL,NULL   /* reserved[1234] */
+};
+static const ProtobufCEnumValue mcs__enum_values_by_number[5] =
+{
+  { "MCS1", "MCS__MCS1", 0 },
+  { "MCS2", "MCS__MCS2", 1 },
+  { "MCS3", "MCS__MCS3", 2 },
+  { "MCS4", "MCS__MCS4", 3 },
+  { "n_schemes", "MCS__n_schemes", 4 },
+};
+static const ProtobufCIntRange mcs__value_ranges[] = {
+{0, 0},{0, 5}
+};
+static const ProtobufCEnumValueIndex mcs__enum_values_by_name[5] =
+{
+  { "MCS1", 0 },
+  { "MCS2", 1 },
+  { "MCS3", 2 },
+  { "MCS4", 3 },
+  { "n_schemes", 4 },
+};
+const ProtobufCEnumDescriptor mcs__descriptor =
+{
+  PROTOBUF_C__ENUM_DESCRIPTOR_MAGIC,
+  "MCS",
+  "MCS",
+  "MCS",
+  "",
+  5,
+  mcs__enum_values_by_number,
+  5,
+  mcs__enum_values_by_name,
+  1,
+  mcs__value_ranges,
   NULL,NULL,NULL,NULL   /* reserved[1234] */
 };

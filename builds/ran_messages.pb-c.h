@@ -38,6 +38,14 @@ typedef enum _RANParameter {
   RAN_PARAMETER__UE_LIST = 2
     PROTOBUF_C__FORCE_ENUM_TO_BE_INT_SIZE(RAN_PARAMETER)
 } RANParameter;
+typedef enum _MCS {
+  MCS__MCS1 = 0,
+  MCS__MCS2 = 1,
+  MCS__MCS3 = 2,
+  MCS__MCS4 = 3,
+  MCS__n_schemes = 4
+    PROTOBUF_C__FORCE_ENUM_TO_BE_INT_SIZE(MCS)
+} MCS;
 
 /* --- messages --- */
 
@@ -133,15 +141,6 @@ struct  _UeInfoM
    */
   int32_t rnti;
   /*
-   * specific ue's measurements (these will come from the gnb)
-   */
-  protobuf_c_boolean has_meas_type_1;
-  float meas_type_1;
-  protobuf_c_boolean has_meas_type_2;
-  float meas_type_2;
-  protobuf_c_boolean has_meas_type_3;
-  float meas_type_3;
-  /*
    * specific ue's propoerties (these will be set by the xapp and sent to gnb)
    * additional measurements
    */
@@ -151,16 +150,19 @@ struct  _UeInfoM
   float ue_ber_uplink;
   protobuf_c_boolean has_ue_ber_downlink;
   float ue_ber_downlink;
+  /*
+   * CONVERTI IN INTERO
+   */
   protobuf_c_boolean has_ue_mcs_uplink;
-  float ue_mcs_uplink;
+  MCS ue_mcs_uplink;
   protobuf_c_boolean has_ue_mcs_downlink;
-  float ue_mcs_downlink;
-  protobuf_c_boolean has_cell_size;
-  int32_t cell_size;
+  MCS ue_mcs_downlink;
+  protobuf_c_boolean has_cell_load;
+  int32_t cell_load;
 };
 #define UE_INFO_M__INIT \
  { PROTOBUF_C_MESSAGE_INIT (&ue_info_m__descriptor) \
-    , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+    , 0, 0, 0, 0, 0, 0, 0, 0, MCS__MCS1, 0, MCS__MCS1, 0, 0 }
 
 
 struct  _UeListM
@@ -339,6 +341,7 @@ typedef void (*UeListM_Closure)
 
 extern const ProtobufCEnumDescriptor    ran_message_type__descriptor;
 extern const ProtobufCEnumDescriptor    ran_parameter__descriptor;
+extern const ProtobufCEnumDescriptor    mcs__descriptor;
 extern const ProtobufCMessageDescriptor ran_param_map_entry__descriptor;
 extern const ProtobufCMessageDescriptor ran_indication_request__descriptor;
 extern const ProtobufCMessageDescriptor ran_indication_response__descriptor;
