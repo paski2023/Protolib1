@@ -12,15 +12,6 @@ enum RAN_parameter{
     UE_LIST = 2;
 }
 
-enum MCS{
-
-    MCS1 = 0; 
-    MCS2 = 1; 
-    MCS3 = 2; 
-    MCS4 = 3; 
-    n_schemes = 4; 
-
-}
 message RAN_param_map_entry{
     required RAN_parameter key = 1;
     oneof value{
@@ -58,17 +49,16 @@ message RAN_message{
 message ue_info_m{
 
     // this is to identify the ue
-    required int32 rnti=1;
-
+    required uint32 rnti=1;
+    optional uint32 ue_rsrp = 2; 
     // specific ue's propoerties (these will be set by the xapp and sent to gnb)
     // additional measurements
-    optional float ue_rsrp = 2;
     optional float ue_ber_uplink = 3;
     optional float ue_ber_downlink = 4;
     // CONVERTI IN INTERO
-    optional MCS ue_mcs_uplink = 6;
-    optional MCS ue_mcs_downlink = 7;
-    optional int32 cell_load = 8;
+    optional uint32 ue_mcs_uplink = 6;
+    optional uint32 ue_mcs_downlink = 7;
+    optional float cell_load = 8;
 }
 
 message ue_list_m{
