@@ -596,7 +596,7 @@ static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[7] =
     "rnti",
     1,
     PROTOBUF_C_LABEL_REQUIRED,
-    PROTOBUF_C_TYPE_INT32,
+    PROTOBUF_C_TYPE_UINT32,
     0,   /* quantifier_offset */
     offsetof(UeInfoM, rnti),
     NULL,
@@ -608,7 +608,7 @@ static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[7] =
     "ue_rsrp",
     2,
     PROTOBUF_C_LABEL_OPTIONAL,
-    PROTOBUF_C_TYPE_FLOAT,
+    PROTOBUF_C_TYPE_UINT32,
     offsetof(UeInfoM, has_ue_rsrp),
     offsetof(UeInfoM, ue_rsrp),
     NULL,
@@ -644,10 +644,10 @@ static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[7] =
     "ue_mcs_uplink",
     6,
     PROTOBUF_C_LABEL_OPTIONAL,
-    PROTOBUF_C_TYPE_ENUM,
+    PROTOBUF_C_TYPE_UINT32,
     offsetof(UeInfoM, has_ue_mcs_uplink),
     offsetof(UeInfoM, ue_mcs_uplink),
-    &mcs__descriptor,
+    NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -656,10 +656,10 @@ static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[7] =
     "ue_mcs_downlink",
     7,
     PROTOBUF_C_LABEL_OPTIONAL,
-    PROTOBUF_C_TYPE_ENUM,
+    PROTOBUF_C_TYPE_UINT32,
     offsetof(UeInfoM, has_ue_mcs_downlink),
     offsetof(UeInfoM, ue_mcs_downlink),
-    &mcs__descriptor,
+    NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -668,7 +668,7 @@ static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[7] =
     "cell_load",
     8,
     PROTOBUF_C_LABEL_OPTIONAL,
-    PROTOBUF_C_TYPE_INT32,
+    PROTOBUF_C_TYPE_FLOAT,
     offsetof(UeInfoM, has_cell_load),
     offsetof(UeInfoM, cell_load),
     NULL,
@@ -816,39 +816,5 @@ const ProtobufCEnumDescriptor ran_parameter__descriptor =
   ran_parameter__enum_values_by_name,
   1,
   ran_parameter__value_ranges,
-  NULL,NULL,NULL,NULL   /* reserved[1234] */
-};
-static const ProtobufCEnumValue mcs__enum_values_by_number[5] =
-{
-  { "MCS1", "MCS__MCS1", 0 },
-  { "MCS2", "MCS__MCS2", 1 },
-  { "MCS3", "MCS__MCS3", 2 },
-  { "MCS4", "MCS__MCS4", 3 },
-  { "n_schemes", "MCS__n_schemes", 4 },
-};
-static const ProtobufCIntRange mcs__value_ranges[] = {
-{0, 0},{0, 5}
-};
-static const ProtobufCEnumValueIndex mcs__enum_values_by_name[5] =
-{
-  { "MCS1", 0 },
-  { "MCS2", 1 },
-  { "MCS3", 2 },
-  { "MCS4", 3 },
-  { "n_schemes", 4 },
-};
-const ProtobufCEnumDescriptor mcs__descriptor =
-{
-  PROTOBUF_C__ENUM_DESCRIPTOR_MAGIC,
-  "MCS",
-  "MCS",
-  "MCS",
-  "",
-  5,
-  mcs__enum_values_by_number,
-  5,
-  mcs__enum_values_by_name,
-  1,
-  mcs__value_ranges,
   NULL,NULL,NULL,NULL   /* reserved[1234] */
 };

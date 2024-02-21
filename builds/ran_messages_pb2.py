@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x12ran_messages.proto\"\x89\x01\n\x13RAN_param_map_entry\x12\x1b\n\x03key\x18\x01 \x02(\x0e\x32\x0e.RAN_parameter\x12\x15\n\x0bint64_value\x18\x02 \x01(\x03H\x00\x12\x16\n\x0cstring_value\x18\x03 \x01(\tH\x00\x12\x1d\n\x07ue_list\x18\x04 \x01(\x0b\x32\n.ue_list_mH\x00\x42\x07\n\x05value\"?\n\x16RAN_indication_request\x12%\n\rtarget_params\x18\x01 \x03(\x0e\x32\x0e.RAN_parameter\"B\n\x17RAN_indication_response\x12\'\n\tparam_map\x18\x01 \x03(\x0b\x32\x14.RAN_param_map_entry\"E\n\x13RAN_control_request\x12.\n\x10target_param_map\x18\x01 \x03(\x0b\x32\x14.RAN_param_map_entry\"\xea\x01\n\x0bRAN_message\x12#\n\x08msg_type\x18\x01 \x02(\x0e\x32\x11.RAN_message_type\x12\x39\n\x16ran_indication_request\x18\x02 \x01(\x0b\x32\x17.RAN_indication_requestH\x00\x12;\n\x17ran_indication_response\x18\x03 \x01(\x0b\x32\x18.RAN_indication_responseH\x00\x12\x33\n\x13ran_control_request\x18\x04 \x01(\x0b\x32\x14.RAN_control_requestH\x00\x42\t\n\x07payload\"\xa9\x01\n\tue_info_m\x12\x0c\n\x04rnti\x18\x01 \x02(\x05\x12\x0f\n\x07ue_rsrp\x18\x02 \x01(\x02\x12\x15\n\rue_ber_uplink\x18\x03 \x01(\x02\x12\x17\n\x0fue_ber_downlink\x18\x04 \x01(\x02\x12\x1b\n\rue_mcs_uplink\x18\x06 \x01(\x0e\x32\x04.MCS\x12\x1d\n\x0fue_mcs_downlink\x18\x07 \x01(\x0e\x32\x04.MCS\x12\x11\n\tcell_load\x18\x08 \x01(\x05\"?\n\tue_list_m\x12\x15\n\rconnected_ues\x18\x01 \x02(\x05\x12\x1b\n\x07ue_info\x18\x02 \x03(\x0b\x32\n.ue_info_m*b\n\x10RAN_message_type\x12\x10\n\x0cSUBSCRIPTION\x10\x01\x12\x16\n\x12INDICATION_REQUEST\x10\x02\x12\x17\n\x13INDICATION_RESPONSE\x10\x03\x12\x0b\n\x07\x43ONTROL\x10\x04*(\n\rRAN_parameter\x12\n\n\x06GNB_ID\x10\x01\x12\x0b\n\x07UE_LIST\x10\x02*<\n\x03MCS\x12\x08\n\x04MCS1\x10\x00\x12\x08\n\x04MCS2\x10\x01\x12\x08\n\x04MCS3\x10\x02\x12\x08\n\x04MCS4\x10\x03\x12\r\n\tn_schemes\x10\x04'
+  serialized_pb=b'\n\x12ran_messages.proto\"\x89\x01\n\x13RAN_param_map_entry\x12\x1b\n\x03key\x18\x01 \x02(\x0e\x32\x0e.RAN_parameter\x12\x15\n\x0bint64_value\x18\x02 \x01(\x03H\x00\x12\x16\n\x0cstring_value\x18\x03 \x01(\tH\x00\x12\x1d\n\x07ue_list\x18\x04 \x01(\x0b\x32\n.ue_list_mH\x00\x42\x07\n\x05value\"?\n\x16RAN_indication_request\x12%\n\rtarget_params\x18\x01 \x03(\x0e\x32\x0e.RAN_parameter\"B\n\x17RAN_indication_response\x12\'\n\tparam_map\x18\x01 \x03(\x0b\x32\x14.RAN_param_map_entry\"E\n\x13RAN_control_request\x12.\n\x10target_param_map\x18\x01 \x03(\x0b\x32\x14.RAN_param_map_entry\"\xea\x01\n\x0bRAN_message\x12#\n\x08msg_type\x18\x01 \x02(\x0e\x32\x11.RAN_message_type\x12\x39\n\x16ran_indication_request\x18\x02 \x01(\x0b\x32\x17.RAN_indication_requestH\x00\x12;\n\x17ran_indication_response\x18\x03 \x01(\x0b\x32\x18.RAN_indication_responseH\x00\x12\x33\n\x13ran_control_request\x18\x04 \x01(\x0b\x32\x14.RAN_control_requestH\x00\x42\t\n\x07payload\"\x9d\x01\n\tue_info_m\x12\x0c\n\x04rnti\x18\x01 \x02(\r\x12\x0f\n\x07ue_rsrp\x18\x02 \x01(\r\x12\x15\n\rue_ber_uplink\x18\x03 \x01(\x02\x12\x17\n\x0fue_ber_downlink\x18\x04 \x01(\x02\x12\x15\n\rue_mcs_uplink\x18\x06 \x01(\r\x12\x17\n\x0fue_mcs_downlink\x18\x07 \x01(\r\x12\x11\n\tcell_load\x18\x08 \x01(\x02\"?\n\tue_list_m\x12\x15\n\rconnected_ues\x18\x01 \x02(\x05\x12\x1b\n\x07ue_info\x18\x02 \x03(\x0b\x32\n.ue_info_m*b\n\x10RAN_message_type\x12\x10\n\x0cSUBSCRIPTION\x10\x01\x12\x16\n\x12INDICATION_REQUEST\x10\x02\x12\x17\n\x13INDICATION_RESPONSE\x10\x03\x12\x0b\n\x07\x43ONTROL\x10\x04*(\n\rRAN_parameter\x12\n\n\x06GNB_ID\x10\x01\x12\x0b\n\x07UE_LIST\x10\x02'
 )
 
 _RAN_MESSAGE_TYPE = _descriptor.EnumDescriptor(
@@ -53,8 +53,8 @@ _RAN_MESSAGE_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=840,
-  serialized_end=938,
+  serialized_start=828,
+  serialized_end=926,
 )
 _sym_db.RegisterEnumDescriptor(_RAN_MESSAGE_TYPE)
 
@@ -79,64 +79,18 @@ _RAN_PARAMETER = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=940,
-  serialized_end=980,
+  serialized_start=928,
+  serialized_end=968,
 )
 _sym_db.RegisterEnumDescriptor(_RAN_PARAMETER)
 
 RAN_parameter = enum_type_wrapper.EnumTypeWrapper(_RAN_PARAMETER)
-_MCS = _descriptor.EnumDescriptor(
-  name='MCS',
-  full_name='MCS',
-  filename=None,
-  file=DESCRIPTOR,
-  create_key=_descriptor._internal_create_key,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='MCS1', index=0, number=0,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='MCS2', index=1, number=1,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='MCS3', index=2, number=2,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='MCS4', index=3, number=3,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='n_schemes', index=4, number=4,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=982,
-  serialized_end=1042,
-)
-_sym_db.RegisterEnumDescriptor(_MCS)
-
-MCS = enum_type_wrapper.EnumTypeWrapper(_MCS)
 SUBSCRIPTION = 1
 INDICATION_REQUEST = 2
 INDICATION_RESPONSE = 3
 CONTROL = 4
 GNB_ID = 1
 UE_LIST = 2
-MCS1 = 0
-MCS2 = 1
-MCS3 = 2
-MCS4 = 3
-n_schemes = 4
 
 
 
@@ -362,15 +316,15 @@ _UE_INFO_M = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='rnti', full_name='ue_info_m.rnti', index=0,
-      number=1, type=5, cpp_type=1, label=2,
+      number=1, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='ue_rsrp', full_name='ue_info_m.ue_rsrp', index=1,
-      number=2, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -390,22 +344,22 @@ _UE_INFO_M = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='ue_mcs_uplink', full_name='ue_info_m.ue_mcs_uplink', index=4,
-      number=6, type=14, cpp_type=8, label=1,
+      number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='ue_mcs_downlink', full_name='ue_info_m.ue_mcs_downlink', index=5,
-      number=7, type=14, cpp_type=8, label=1,
+      number=7, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='cell_load', full_name='ue_info_m.cell_load', index=6,
-      number=8, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      number=8, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -422,7 +376,7 @@ _UE_INFO_M = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=604,
-  serialized_end=773,
+  serialized_end=761,
 )
 
 
@@ -460,8 +414,8 @@ _UE_LIST_M = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=775,
-  serialized_end=838,
+  serialized_start=763,
+  serialized_end=826,
 )
 
 _RAN_PARAM_MAP_ENTRY.fields_by_name['key'].enum_type = _RAN_PARAMETER
@@ -491,8 +445,6 @@ _RAN_MESSAGE.fields_by_name['ran_indication_response'].containing_oneof = _RAN_M
 _RAN_MESSAGE.oneofs_by_name['payload'].fields.append(
   _RAN_MESSAGE.fields_by_name['ran_control_request'])
 _RAN_MESSAGE.fields_by_name['ran_control_request'].containing_oneof = _RAN_MESSAGE.oneofs_by_name['payload']
-_UE_INFO_M.fields_by_name['ue_mcs_uplink'].enum_type = _MCS
-_UE_INFO_M.fields_by_name['ue_mcs_downlink'].enum_type = _MCS
 _UE_LIST_M.fields_by_name['ue_info'].message_type = _UE_INFO_M
 DESCRIPTOR.message_types_by_name['RAN_param_map_entry'] = _RAN_PARAM_MAP_ENTRY
 DESCRIPTOR.message_types_by_name['RAN_indication_request'] = _RAN_INDICATION_REQUEST
@@ -503,7 +455,6 @@ DESCRIPTOR.message_types_by_name['ue_info_m'] = _UE_INFO_M
 DESCRIPTOR.message_types_by_name['ue_list_m'] = _UE_LIST_M
 DESCRIPTOR.enum_types_by_name['RAN_message_type'] = _RAN_MESSAGE_TYPE
 DESCRIPTOR.enum_types_by_name['RAN_parameter'] = _RAN_PARAMETER
-DESCRIPTOR.enum_types_by_name['MCS'] = _MCS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RAN_param_map_entry = _reflection.GeneratedProtocolMessageType('RAN_param_map_entry', (_message.Message,), {
